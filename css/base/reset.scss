@@ -21,12 +21,10 @@ body {
   position: relative;
 
   &__links {
-    height: 0;
-
-    transform-origin: top;
-    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     position: relative;
-    transition: height 1s;
+    transition: all 0.5s;
   }
 
   &__links-show {
@@ -112,7 +110,7 @@ body {
     }
 
     .burger-row-1 {
-      transform: rotate(45deg) translate(0.4rem, 0.3rem);
+      transform: rotate(45deg) translate(0.2rem, 0.3rem);
     }
 
     .burger-row-3 {
@@ -392,8 +390,7 @@ img.full-percent {
     }
 
     &__links-lg {
-      opacity: 1;
-      height: unset;
+      max-height: unset;
       display: flex;
     }
   }

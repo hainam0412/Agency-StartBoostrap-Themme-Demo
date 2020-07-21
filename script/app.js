@@ -33,3 +33,29 @@ window.addEventListener("click", (e) => {
     body.classList.remove("hide-scroll");
   }
 });
+
+const burgerButton = document.querySelector("#burger-button");
+
+const navLinks = document.querySelector(".nav__links");
+
+burgerButton.addEventListener("click", showNavLinks);
+
+function showNavLinks() {
+  if (!navLinks.classList.contains("nav__links-show")) {
+    navLinks.classList.add("nav__links-show");
+    burgerButton.classList.add("nav__burger-button-clicked");
+  } else {
+    navLinks.classList.remove("nav__links-show");
+    burgerButton.classList.remove("nav__burger-button-clicked");
+  }
+}
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+
+  nav.classList.add("nav-onScroll");
+
+  if (pageYOffset == 0) {
+    nav.classList.remove("nav-onScroll");
+  }
+});

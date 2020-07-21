@@ -1,12 +1,17 @@
 header {
-  background-image: url("../asset/images/header-bg.jpg");
+  background-image: url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .nav {
-  align-items: center;
+  position: relative;
+
+  & > div {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
   &__logo {
     a {
@@ -32,6 +37,17 @@ header {
       color: #fff;
     }
   }
+
+  &__links-show {
+    max-height: 100vh;
+  }
+}
+
+.nav-onScroll {
+  position: fixed;
+  background-color: #212529;
+  width: 100%;
+  z-index: 4;
 }
 
 .welcome {
@@ -50,6 +66,23 @@ header {
     font-size: 7.2rem;
     font-weight: 700;
     margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    &__links {
+      position: absolute;
+      right: 0;
+      flex-direction: column;
+      top: 100%;
+      width: 100%;
+      background-color: #212529;
+
+      &-link {
+        padding: 2rem;
+      }
+    }
   }
 }
 

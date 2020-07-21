@@ -14,29 +14,31 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="nav d-flex-bw wrapper">
-        <div class="nav__logo">
-          <a href="">
-            <img src="./images/navbar-logo.svg" alt="" />
-          </a>
-        </div>
+      <nav class="nav">
+        <div class="d-flex-bw wrapper">
+          <div class="nav__logo">
+            <a href="">
+              <img src="./images/navbar-logo.svg" alt="" />
+            </a>
+          </div>
 
-        <ul class="nav__links nav__links-lg">
-          <li class="nav__links-link"><a href="#services">services</a></li>
-          <li class="nav__links-link"><a href="#portfolio">portfolio</a></li>
-          <li class="nav__links-link"><a href="">about</a></li>
-          <li class="nav__links-link"><a href="">team</a></li>
-          <li class="nav__links-link"><a href="">contact</a></li>
-        </ul>
+          <ul class="nav__links nav__links-lg">
+            <li class="nav__links-link"><a href="#services">services</a></li>
+            <li class="nav__links-link"><a href="#portfolio">portfolio</a></li>
+            <li class="nav__links-link"><a href="#about">about</a></li>
+            <li class="nav__links-link"><a href="#team">team</a></li>
+            <li class="nav__links-link"><a href="#contact">contact</a></li>
+          </ul>
 
-        <div class="nav__burger-button nav__burger-button-lg">
-          <div class="burger-row-1"></div>
-          <div class="burger-row-2"></div>
-          <div class="burger-row-3"></div>
+          <div class="nav__burger-button nav__burger-button-lg" id="burger-button">
+            <div class="burger-row-1"></div>
+            <div class="burger-row-2"></div>
+            <div class="burger-row-3"></div>
+          </div>
         </div>
       </nav>
 
@@ -77,11 +79,11 @@
           <div class="col-12 col-lg-4">
             <div class="services__container__item">
               <div class="services__container__item-icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa fa-laptop" aria-hidden="true"></i>
               </div>
 
               <h3 class="services__container__item-label">
-                E-Commerce
+                Responsive Design
               </h3>
 
               <p class="services__container__item-content">
@@ -94,11 +96,11 @@
           <div class="col-12 col-lg-4">
             <div class="services__container__item">
               <div class="services__container__item-icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa fa-lock" aria-hidden="true"></i>
               </div>
 
               <h3 class="services__container__item-label">
-                E-Commerce
+                Web Security
               </h3>
 
               <p class="services__container__item-content">
@@ -138,15 +140,15 @@
           <div class="col-12 col-lg-4 col-md-6">
             <div class="portfolio__container-item">
               <div data-modal="1" class="portfolio__container-item-img">
-                <img src="./images/portfolio/01-thumbnail.jpg" alt="" />
+                <img src="./images/portfolio/02-thumbnail.jpg" alt="" />
               </div>
 
               <h3 class="portfolio__container-item-label">
-                Threads
+                Explore
               </h3>
 
               <p class="portfolio__container-item-inner">
-                Illustration
+                Graphic Design
               </p>
             </div>
           </div>
@@ -154,15 +156,15 @@
           <div class="col-12 col-lg-4 col-md-6">
             <div class="portfolio__container-item">
               <div data-modal="2" class="portfolio__container-item-img">
-                <img src="./images/portfolio/01-thumbnail.jpg" alt="" />
+                <img src="./images/portfolio/03-thumbnail.jpg" alt="" />
               </div>
 
               <h3 class="portfolio__container-item-label">
-                Threads
+                Finish
               </h3>
 
               <p class="portfolio__container-item-inner">
-                Illustration
+                Identity
               </p>
             </div>
           </div>
@@ -170,15 +172,15 @@
           <div class="col-12 col-lg-4 col-md-6">
             <div class="portfolio__container-item">
               <div data-modal="3" class="portfolio__container-item-img">
-                <img src="./images/portfolio/01-thumbnail.jpg" alt="" />
+                <img src="./images/portfolio/04-thumbnail.jpg" alt="" />
               </div>
 
               <h3 class="portfolio__container-item-label">
-                Threads
+                Lines
               </h3>
 
               <p class="portfolio__container-item-inner">
-                Illustration
+                Branding
               </p>
             </div>
           </div>
@@ -186,15 +188,15 @@
           <div class="col-12 col-lg-4 col-md-6">
             <div class="portfolio__container-item">
               <div data-modal="4" class="portfolio__container-item-img">
-                <img src="./images/portfolio/01-thumbnail.jpg" alt="" />
+                <img src="./images/portfolio/05-thumbnail.jpg" alt="" />
               </div>
 
               <h3 class="portfolio__container-item-label">
-                Threads
+                Southwest
               </h3>
 
               <p class="portfolio__container-item-inner">
-                Illustration
+                Website Design
               </p>
             </div>
           </div>
@@ -202,15 +204,15 @@
           <div class="col-12 col-lg-4 col-md-6">
             <div class="portfolio__container-item">
               <div data-modal="5" class="portfolio__container-item-img">
-                <img src="./images/portfolio/01-thumbnail.jpg" alt="" />
+                <img src="./images/portfolio/06-thumbnail.jpg" alt="" />
               </div>
 
               <h3 class="portfolio__container-item-label">
-                Threads
+                Window
               </h3>
 
               <p class="portfolio__container-item-inner">
-                Illustration
+                Photography
               </p>
             </div>
           </div>
@@ -219,7 +221,7 @@
         <div class="portfolio__container-modal">
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
             <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
@@ -247,14 +249,14 @@
 
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
             <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
               Lorem ipsum dolor sit amet consectetur.
             </p>
 
-            <img src="./images/portfolio/01-full.jpg" alt="" />
+            <img src="./images/portfolio/02-full.jpg" alt="" />
 
             <p class="portfolio__modal-content-inner">
               Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
@@ -275,14 +277,14 @@
 
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
             <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
               Lorem ipsum dolor sit amet consectetur.
             </p>
 
-            <img src="./images/portfolio/01-full.jpg" alt="" />
+            <img src="./images/portfolio/03-full.jpg" alt="" />
 
             <p class="portfolio__modal-content-inner">
               Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
@@ -303,14 +305,14 @@
 
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
             <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
               Lorem ipsum dolor sit amet consectetur.
             </p>
 
-            <img src="./images/portfolio/01-full.jpg" alt="" />
+            <img src="./images/portfolio/04-full.jpg" alt="" />
 
             <p class="portfolio__modal-content-inner">
               Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
@@ -331,14 +333,14 @@
 
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
             <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
               Lorem ipsum dolor sit amet consectetur.
             </p>
 
-            <img src="./images/portfolio/01-full.jpg" alt="" />
+            <img src="./images/portfolio/05-full.jpg" alt="" />
 
             <p class="portfolio__modal-content-inner">
               Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
@@ -359,14 +361,14 @@
 
           <div class="portfolio__modal-content text-center">
             <button class="portfolio__modal-close">
-              X
+              &times;
             </button>
-            <h2>PROJECT asdsad</h2>
+            <h2>PROJECT NAME</h2>
             <p class="portfolio__modal-content-desc">
               Lorem ipsum dolor sit amet consectetur.
             </p>
 
-            <img src="./images/portfolio/01-full.jpg" alt="" />
+            <img src="./images/portfolio/06-full.jpg" alt="" />
 
             <p class="portfolio__modal-content-inner">
               Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
@@ -420,8 +422,8 @@
             <div class="col-md-6 col-12">
               <div class="about__timeline-container-item">
                 <h4>
-                  2009-2011 <br />
-                  Our Humble Beginnings
+                  March 2011 <br />
+                  An Agency is Born
                 </h4>
 
                 <p>
@@ -441,8 +443,8 @@
             <div class="col-md-6 col-12">
               <div class="about__timeline-container-item">
                 <h4>
-                  2009-2011 <br />
-                  Our Humble Beginnings
+                  December 2012 <br />
+                  Transition to Full Service
                 </h4>
 
                 <p>
@@ -462,8 +464,8 @@
             <div class="col-md-6 col-12">
               <div class="about__timeline-container-item">
                 <h4>
-                  2009-2011 <br />
-                  Our Humble Beginnings
+                  July 2014 <br />
+                  Phase Two Expansion
                 </h4>
 
                 <p>
@@ -530,12 +532,12 @@
           <div class="col-12 col-lg-4">
             <div class="team__container-item">
               <div class="team__container-item-img">
-                <img src="./images/team/1.jpg" alt="" />
+                <img src="./images/team/2.jpg" alt="" />
               </div>
 
               <div class="team__container-item-inner">
-                <p class="team__item-name">Kay Garland</p>
-                <p class="team__item-label">Lead Designer</p>
+                <p class="team__item-name">Larry Parker</p>
+                <p class="team__item-label">Lead Marketer</p>
 
                 <ul class="team__item-social">
                   <li class="team__item-social-link">
@@ -563,12 +565,12 @@
           <div class="col-12 col-lg-4">
             <div class="team__container-item">
               <div class="team__container-item-img">
-                <img src="./images/team/1.jpg" alt="" />
+                <img src="./images/team/3.jpg" alt="" />
               </div>
 
               <div class="team__container-item-inner">
-                <p class="team__item-name">Kay Garland</p>
-                <p class="team__item-label">Lead Designer</p>
+                <p class="team__item-name">Diana Petersen</p>
+                <p class="team__item-label">Lead Developer</p>
 
                 <ul class="team__item-social">
                   <li class="team__item-social-link">
@@ -677,7 +679,7 @@
       </div>
     </main>
 
-    <footer class="footer d-flex-bw wrapper">
+    <!-- <footer class="footer d-flex-bw wrapper">
       <div class="col-12 col-lg-4">
         <span>Copyright © Your Website 2020</span>
       </div>
@@ -715,8 +717,8 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
-    <script src="../script/app.js"></script>
+    <script src="./script/app.js"></script>
   </body>
 </html>

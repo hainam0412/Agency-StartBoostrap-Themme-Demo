@@ -21,11 +21,10 @@ body {
   position: relative;
 }
 .nav__links {
-  height: 0;
-  transform-origin: top;
-  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
   position: relative;
-  transition: height 1s;
+  transition: all 0.5s;
 }
 .nav__links-show {
   position: absolute;
@@ -90,7 +89,7 @@ body {
   display: none;
 }
 .nav__burger-button-clicked .burger-row-1 {
-  transform: rotate(45deg) translate(0.4rem, 0.3rem);
+  transform: rotate(45deg) translate(0.2rem, 0.3rem);
 }
 .nav__burger-button-clicked .burger-row-3 {
   transform: rotate(-45deg) translate(0.2rem, -0.3rem);
@@ -549,8 +548,7 @@ img.full-percent {
     display: none;
   }
   .nav__links-lg {
-    opacity: 1;
-    height: unset;
+    max-height: unset;
     display: flex;
   }
 }
@@ -662,14 +660,18 @@ body {
 }
 
 header {
-  background-image: url("../asset/images/header-bg.jpg");
+  background-image: url("../images/header-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .nav {
+  position: relative;
+}
+.nav > div {
   align-items: center;
+  flex-wrap: nowrap;
 }
 .nav__logo a {
   padding: 3rem 0;
@@ -689,6 +691,16 @@ header {
   text-transform: uppercase;
   color: #fff;
 }
+.nav__links-show {
+  max-height: 100vh;
+}
+
+.nav-onScroll {
+  position: fixed;
+  background-color: #212529;
+  width: 100%;
+  z-index: 4;
+}
 
 .welcome {
   color: #fff;
@@ -707,6 +719,19 @@ header {
   margin-bottom: 6rem;
 }
 
+@media (max-width: 992px) {
+  .nav__links {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    top: 100%;
+    width: 100%;
+    background-color: #212529;
+  }
+  .nav__links-link {
+    padding: 2rem;
+  }
+}
 @media (max-width: 768px) {
   .welcome h3 {
     font-size: 2.4rem;
@@ -774,14 +799,19 @@ header {
   text-align: center;
 }
 .services__container__item-icon {
+  margin: 0 auto;
   margin-bottom: 3rem;
+  color: #fff;
+  background-color: #fed136;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .services__container__item-icon i {
   font-size: 6.4rem;
-  color: #fff;
-  background-color: #fed136;
-  padding: 2rem;
-  border-radius: 50%;
 }
 .services__container__item-label {
   font-size: 2.4rem;
@@ -848,19 +878,21 @@ header {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: lighter;
+  background: none;
 }
 .portfolio .portfolio__modal-content {
   background-color: #fff;
   padding: 20rem 12rem;
   position: absolute;
   width: 90%;
-  top: 3rem;
+  top: 12rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   display: none;
+  border-radius: 1rem;
 }
 .portfolio .portfolio__modal-content h2 {
   font-size: 4.8rem;
@@ -869,6 +901,7 @@ header {
 .portfolio .portfolio__modal-content-desc {
   font-style: italic;
   color: #6c757d;
+  line-height: 1.8;
   margin-bottom: 2rem;
 }
 .portfolio .portfolio__modal-content img {
@@ -879,6 +912,7 @@ header {
   width: 60%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  line-height: 2.8rem;
 }
 
 .about {
@@ -1004,7 +1038,7 @@ header {
 
 .contact {
   background-color: #212529;
-  background-image: url("../asset/images/map-image.png");
+  background-image: url("../images/map-image.png");
   background-position: center;
   background-size: cover;
 }
@@ -1072,6 +1106,46 @@ header {
     width: 8rem;
     height: 8rem;
     margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .portfolio .portfolio__modal-content {
+    padding: 12rem 5rem;
+  }
+  .portfolio .portfolio__modal-content-inner {
+    width: 80%;
+  }
+  .portfolio .portfolio__modal-content a.btn {
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .portfolio .portfolio__modal-content {
+    padding: 12rem 2rem;
+  }
+  .portfolio .portfolio__modal-content h2 {
+    font-size: 3.5rem;
+  }
+  .portfolio .portfolio__modal-content-inner {
+    width: 100%;
+  }
+
+  .about__timeline::before {
+    left: 4rem;
+  }
+  .about__timeline-container-item {
+    padding-left: 10rem;
+    padding-right: 0rem;
+  }
+  .about__timeline-container-item-img {
+    left: 0rem;
+  }
+  .about__timeline-container-slogan {
+    margin: 0;
+    width: 8rem;
+    height: 8rem;
+    margin-left: 0rem;
     font-size: 1.2rem;
   }
 }
