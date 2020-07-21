@@ -1,0 +1,15 @@
+@import "../common/var.scss";
+
+.btn {
+  padding: 2rem 4rem;
+  text-transform: uppercase;
+}
+
+.btn-round {
+  border-radius: 0.4rem;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+}

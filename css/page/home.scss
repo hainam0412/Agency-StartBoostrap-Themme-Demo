@@ -1,0 +1,369 @@
+.services {
+  &__container__item {
+    padding: 0 1.5rem;
+    text-align: center;
+
+    &-icon {
+      margin-bottom: 3rem;
+      i {
+        font-size: 6.4rem;
+        color: #fff;
+        background-color: $primary;
+        padding: 2rem;
+        border-radius: 50%;
+      }
+    }
+
+    &-label {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+
+    &-content {
+      color: $grey;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+.portfolio {
+  &__container-item {
+    text-align: center;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+
+    &-img {
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 3.5rem;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+
+      &::before {
+        content: "+";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(254, 209, 54, 0.9), rgba(254, 209, 54, 0.9));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 0.2rem);
+        color: #fff;
+        font-size: 8.4rem;
+        transition: all 0.5s;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    &-label {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    &-inner {
+      font-style: italic;
+      color: $grey;
+    }
+  }
+
+  &__container-modal {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    overflow-y: scroll;
+    display: none;
+  }
+
+  .portfolio__modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 6rem;
+    font-weight: lighter;
+  }
+
+  .portfolio__modal-content {
+    background-color: #fff;
+    padding: 20rem 12rem;
+    position: absolute;
+    width: 90%;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: none;
+
+    h2 {
+      font-size: 4.8rem;
+      margin-bottom: 2rem;
+    }
+
+    &-desc {
+      font-style: italic;
+      color: $grey;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 50%;
+      margin-bottom: 3rem;
+    }
+
+    &-inner {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.about {
+  overflow: hidden;
+  &__timeline {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 0.2rem;
+      background-color: #eee;
+      z-index: -1;
+    }
+
+    &-container {
+      position: relative;
+      margin-bottom: 10rem;
+    }
+
+    & &-container:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    & &-container:nth-child(odd) {
+      text-align: right;
+    }
+
+    &-container-item {
+      padding-left: 12rem;
+      padding-right: 12rem;
+
+      h4 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        line-height: 2.9rem;
+      }
+
+      p {
+        line-height: 2.8rem;
+        color: $grey;
+      }
+
+      &-img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 14rem;
+        height: 14rem;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &-container-slogan {
+      background-color: $primary;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 50%;
+      width: 14rem;
+      height: 14rem;
+      margin: 0 auto;
+      align-items: center;
+      text-align: center;
+      padding: 0 4rem;
+    }
+  }
+}
+
+.team {
+  &__container-item {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    &-img {
+      margin-bottom: 2rem;
+
+      img {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        border: 3px solid #ccc;
+      }
+    }
+
+    &-inner {
+      .team__item-name {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      .team__item-label {
+        color: $grey;
+        margin-bottom: 2rem;
+      }
+
+      .team__item-social {
+        margin-bottom: 2rem;
+        &-link {
+          margin: 0 1rem;
+          width: 4rem;
+          height: 4rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background-color: #23272b;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__quote {
+    color: $grey;
+    line-height: 2.8rem;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+.brand {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+
+  &__container-item {
+    margin-bottom: 3rem;
+  }
+}
+
+.contact {
+  background-color: #212529;
+  background-image: url("../asset/images/map-image.png");
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    h2 {
+      color: #fff;
+    }
+  }
+
+  &__form {
+    &-input {
+      padding: 0 1.5rem;
+
+      &-row {
+        margin-bottom: 3rem;
+
+        input {
+          width: 100%;
+          padding: 2rem 1.5rem;
+        }
+      }
+    }
+
+    &-comment {
+      height: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 3rem;
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about__timeline {
+    &-container-item {
+      padding-left: 8rem;
+      padding-right: 8rem;
+
+      &-img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about__timeline {
+    &::before {
+      left: 6rem;
+    }
+
+    & &-container:nth-child(even) {
+      flex-direction: row;
+    }
+
+    & &-container:nth-child(odd) {
+      text-align: left;
+    }
+
+    &-container-item {
+      padding-left: 14rem;
+      padding-right: 4rem;
+      &-img {
+        left: 2rem;
+        transform: translateX(0);
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-container-slogan {
+      margin: 0;
+      width: 8rem;
+      height: 8rem;
+      margin-left: 2rem;
+      font-size: 1.2rem;
+    }
+  }
+}

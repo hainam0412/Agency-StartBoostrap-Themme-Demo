@@ -1,0 +1,30 @@
+.footer {
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  &__social {
+    align-items: center;
+    &-link {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: #23272b;
+      border-radius: 50%;
+      margin: 0 1rem;
+    }
+  }
+
+  &__links {
+    align-items: center;
+
+    &-link {
+      color: $primary;
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../common/var.scss";
+
+.wrapper {
+  max-width: 117.2rem;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $grey;
+      font-style: italic;
+    }
+  }
+}
+
+.wrapper-tb {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hide-scroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
