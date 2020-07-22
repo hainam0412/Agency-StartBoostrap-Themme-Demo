@@ -30,6 +30,13 @@ closeButtons.forEach((btn, index) => {
 window.addEventListener("click", (e) => {
   if (e.target == modal) {
     modal.style.display = "none";
+
+    let modalContent = modal.querySelectorAll(".portfolio__modal-content");
+
+    modalContent.forEach((item) => {
+      item.style.display = "none";
+    });
+
     body.classList.remove("hide-scroll");
   }
 });
